@@ -161,6 +161,38 @@
 			"response": []
 		},
 		{
+			"name": "Get All Employees Directly Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/employees/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"employees",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Get All Departments Directly",
 			"request": {
 				"method": "GET",

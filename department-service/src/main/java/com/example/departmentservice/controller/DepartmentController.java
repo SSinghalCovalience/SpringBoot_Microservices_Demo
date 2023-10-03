@@ -70,7 +70,7 @@ public class DepartmentController {
    *
    * @return department object
    */
-  @GetMapping("/with-employees")
+  @GetMapping("/withEmployees")
   public BaseResponse<List<Department>> findAllWithEmployees() {
     log.info("Department find All");
     List<Department> departments
