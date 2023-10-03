@@ -3,7 +3,9 @@ package com.example.departmentservice.controller;
 import com.example.departmentservice.client.EmployeeClient;
 import com.example.departmentservice.model.BaseResponse;
 import com.example.departmentservice.model.Department;
+import com.example.departmentservice.model.Employee;
 import com.example.departmentservice.repository.DepartmentRepository;
+import java.util.ArrayList;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -75,7 +77,7 @@ public class DepartmentController {
           = repository.findAll();
     departments.forEach(department ->
           department.setEmployees(
-                employeeClient.findByDepartment(department.getId())));
+                employeeClient.findByDepartment(department.getId()).getData()));
     return new BaseResponse<>(true, 200, "Success", departments);
   }
 }

@@ -1,5 +1,7 @@
 package com.example.employeeservice.repository;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -20,7 +22,12 @@ public class BaseResponse<T> {
    * @param message - Message
    * @param data - Actual response data
    */
-  public BaseResponse(boolean success, int code, String message, T data) {
+  @JsonCreator
+  public BaseResponse(
+        @JsonProperty("success") boolean success,
+        @JsonProperty("code") int code,
+        @JsonProperty("message") String message,
+        @JsonProperty("data") T data) {
     this.success = success;
     this.code = code;
     this.message = message;
