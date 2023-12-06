@@ -1,5 +1,5 @@
 # Microservices Application
-This is a microservices application built with Spring Boot. It consists of the following services:
+This is a microservices application built with Spring Boot -3.0.6 and java - 17. It consists of the following services:
 
 # Config Server
 The Config Server provides a centralized configuration for all the microservices. It is implemented using Spring Cloud Config Server.
